@@ -1,3 +1,117 @@
-.index-title {
-  font-size: 100px;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 0;
+  height: 100vh;
+  .logo {
+    padding-left: 32px;
+  }
+}
+
+.sidebar-menu {
+  margin-top: 32px;
+  .sidebar-menu-active {
+    padding-left: 28px;
+    border-left: 4px solid $success;
+    color: $success;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 32px;
+    color: $gray-900;
+  }
+  li:not(:first-of-type) {
+    margin-top: 28px;
+  }
+}
+
+.sidebar-bottom {
+  display: flex;
+  align-items: center;
+  img {
+    width: 40px;
+    height: 40px;
+    margin-left: 32px;
+  }
+  .user-info {
+    margin-left: 16px;
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      color: $gray-900;
+      margin: 0;
+    }
+    p {
+      font-size: 14px;
+      color: $gray-600;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+div.admin-block {
+  padding: 32px;
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .admin-block-top-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .admin-block-top-bar-left {
+    display: flex;
+    align-items: center;
+    .add-new-admin-modal {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 48px;
+    }
+  }
+  .admin-block-top-bar-right {
+    .btn:last-of-type {
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    }
+  }
+  .table {
+    margin-top: 48px;
+    thead tr:first-of-type {
+      border: 1px solid var(--gray-900);
+    }
+    tbody td {
+      padding: 20px 8px;
+    }
+    .user_actions_block {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        display: flex;
+        align-items: center;
+      }
+      .material-symbols-outlined {
+        font-size: 24px;
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    }
+  }
+  .pagination {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 64px;
+    .page-link .material-symbols-outlined {
+      font-size: 16px;
+      vertical-align: middle;
+      color: $success;
+    }
+  }
 }

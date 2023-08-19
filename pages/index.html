@@ -7,51 +7,317 @@
     <title>index</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <main class="container-fluid p-0">
+      <div class="row g-0">
+        <aside class="col-2 bg-light sidebar">
+          <div class="sidebar-top">
+            <img class="logo" src="/assets/images/logo-ANSWER.svg" alt="logo" />
+            <nav>
+              <ul class="list-unstyled sidebar-menu">
+                <li class="text-dark">
+                  <span class="me-3 material-symbols-outlined">analytics</span
+                  >Dashboard
+                </li>
+                <li class="text-dark">
+                  <span class="me-3 material-symbols-outlined">forum</span
+                  >Question
+                </li>
+                <li class="text-dark">
+                  <span class="me-3 material-symbols-outlined">assignment</span
+                  >Assignment
+                </li>
+                <li class="text-dark">
+                  <span class="me-3 material-symbols-outlined">slideshow</span
+                  >Course
+                </li>
+                <li class="sidebar-menu-active">
+                  <span class="me-3 material-symbols-outlined">group</span>Admin
+                </li>
+                <li class="text-dark">
+                  <span class="me-3 material-symbols-outlined">settings</span
+                  >Settings
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+          <div class="sidebar-bottom">
+            <img
+              class="rounded-circle"
+              src="/assets/images/andychen.jpeg"
+              alt="avatar"
+            />
+            <div class="user-info">
+              <h2>Andy Chen</h2>
+              <p>andy0401@mail.com</p>
+            </div>
           </div>
+        </aside>
+        <div class="col-10 admin-block">
+          <div class="admin-block-top-bar">
+            <div class="admin-block-top-bar-left">
+              <h1 class="text-dark">Admin</h1>
+              <button
+                type="button"
+                class="btn btn-link text-success text-decoration-none add-new-admin-modal"
+              >
+                <span class="me-2 material-symbols-outlined">add</span>Add New
+                Admin
+              </button>
+            </div>
+            <div class="admin-block-top-bar-right">
+              <button
+                type="button"
+                class="btn btn-link text-dark text-decoration-none me-4 p-0"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-link text-dark text-decoration-none p-0"
+              >
+                <span class="material-symbols-outlined">
+                  notifications_active
+                </span>
+              </button>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#3</td>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#5</td>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#6</td>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#8</td>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#9</td>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#10</td>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.comm</td>
+                <td>Yes</td>
+                <td class="user_actions_block">
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none me-4 p-0"
+                  >
+                    <span class="material-symbols-outlined">visibility</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-dark text-decoration-none p-0"
+                  >
+                    <span class="material-symbols-outlined">edit</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nav>
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><span class="material-symbols-outlined">
+                    chevron_left
+                    </span></a
+                >
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><span class="material-symbols-outlined">
+                    chevron_right
+                    </span></a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </div>
-
-    <%- include('./layout/footer'); -%>
-
+    </main>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
